@@ -1,0 +1,321 @@
+// https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-import-no-partial-leading-underscore/README.md
+@import "toolbox";
+// @import "_toolbox"; // FAIL
+
+// https://stylelint.io/user-guide/rules/at-rule-no-unknown/
+.at-rule-no-unknown {
+  @media (max-width: 960px) {
+    color: #ff0;
+  }
+
+  // FAIL
+  // @unknown {
+  //   color: #ff0;
+  // }
+}
+
+// https://stylelint.io/user-guide/rules/color-hex-case/
+.color-hex-case {
+  color: #ff0;
+  // color: #FF0; // FAIL
+}
+
+// https://stylelint.io/user-guide/rules/color-hex-length/
+.color-hex-length {
+  color: #ff0;
+  // color: #ffff00; // FAIL
+}
+
+// https://stylelint.io/user-guide/rules/color-named/
+.color-named {
+  color: #ff0;
+  // color: yellow; // FAIL
+}
+
+// https://stylelint.io/user-guide/rules/declaration-bang-space-after/
+.declaration-bang-space-after {
+  color: #ff0 !important;
+  // color: #ff0 ! important; // FAIL
+}
+
+// https://stylelint.io/user-guide/rules/declaration-bang-space-before/
+.declaration-bang-space-before {
+  color: #ff0 !important;
+  // color: #ff0!important; // FAIL
+}
+
+// https://stylelint.io/user-guide/rules/declaration-block-no-duplicate-properties/
+.declaration-block-no-duplicate-properties {
+  color: #ff0;
+  // // FAIL
+  // color: #ff0;
+  // color: #f00;
+}
+
+// https://stylelint.io/user-guide/rules/declaration-block-no-redundant-longhand-properties/
+.declaration-block-no-redundant-longhand-properties {
+  margin: 1px 2px 3px 4px;
+  // // FAIL
+  // margin-top: 1px;
+  // margin-right: 2px;
+  // margin-bottom: 3px;
+  // margin-left: 4px;
+}
+
+// https://stylelint.io/user-guide/rules/declaration-block-no-shorthand-property-overrides/
+.declaration-block-no-shorthand-property-overrides {
+  padding: 20px;
+  padding-left: 10px;
+  // // FAIL
+  // padding-left: 10px;
+  // padding: 20px;
+}
+
+// https://stylelint.io/user-guide/rules/declaration-block-semicolon-newline-after/
+.declaration-block-semicolon-newline-after {
+  color: #ff0;
+  top: 0;
+  // color: #ff0; top: 0; // FAIL
+}
+
+// https://stylelint.io/user-guide/rules/declaration-block-semicolon-space-before/
+.declaration-block-semicolon-space-before {
+  color: #ff0;
+  // color: #ff0 ; // FAIL
+}
+
+// https://stylelint.io/user-guide/rules/declaration-block-trailing-semicolon/
+.declaration-block-trailing-semicolon {
+  // color: #ff0;
+  // // FAIL
+  // color: #ff0
+}
+
+// https://stylelint.io/user-guide/rules/declaration-colon-space-after/
+.declaration-colon-space-after {
+  box-shadow:
+    0 0 0 1px #5b9dd9,
+    0 0 2px 1px rgba(30, 140, 190, 0.8);
+  color: #ff0;
+  // color:#ff0; // FAIL
+}
+
+// https://stylelint.io/user-guide/rules/declaration-colon-space-before/
+.declaration-colon-space-before {
+  color: #ff0;
+  // color : #ff0; // FAIL
+}
+
+// https://stylelint.io/user-guide/rules/declaration-property-value-blacklist/
+.declaration-property-value-blacklist {
+  border: 0;
+  // border: none; // FAIL
+}
+
+// https://stylelint.io/user-guide/rules/function-blacklist/
+.function-blacklist {
+  // color: rgb(255, 0, 0); // FAIL
+}
+
+// https://stylelint.io/user-guide/rules/function-comma-space-after/
+.function-comma-space-after {
+  background-image:
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      #fff 25px,
+      rgba(255, 255, 255, 1) 50px
+    );
+  color: rgba(255, 0, 0, 0.25);
+  // color: rgba(255,0,0); // FAIL
+
+}
+
+// https://stylelint.io/user-guide/rules/function-comma-space-before/
+.function-comma-space-before {
+  color: rgba(255, 0, 0, 0.25);
+  // color: rgba(255 , 0 , 0 , 0.25); // FAIL
+}
+
+// https://stylelint.io/user-guide/rules/function-parentheses-space-inside/
+.function-parentheses-space-inside {
+  background-image:
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      #fff 25px,
+      rgba(255, 255, 255, 1) 50px
+    );
+  color: rgba(255, 0, 0, 0.25);
+  // color: rgba( 255, 0, 0, 0.25 ); // FAIL
+}
+
+// https://stylelint.io/user-guide/rules/function-url-quotes/
+.function-url-quotes {
+  background: url('/logo.png');
+  // background: url(/logo.png); // FAIL
+}
+
+// https://stylelint.io/user-guide/rules/indentation/
+.indentation {
+  color: #ff0;
+  //    color: #ff0; // FAIL
+}
+
+// https://stylelint.io/user-guide/rules/length-zero-no-unit/
+.length-zero-no-unit {
+  margin: 0;
+  // margin: 0px; // FAIL
+}
+
+// https://stylelint.io/user-guide/rules/max-nesting-depth/
+.max-nesting-depth {
+  .level-1 {
+    color: #ff0;
+
+    // media and other @ rules are ignored
+    @media (min-width: 1000px) {
+      color: #ff0;
+    }
+  }
+
+  &::before {
+    color: #ff0;
+  }
+
+  &:hover {
+    color: #f00;
+  }
+
+  // // FAIL
+  // .level-1 {
+  //   color: #ff0;
+
+  //   .level-2 {
+  //     color: #f00;
+  //   }
+
+  //   &::before {
+  //     color: #ff0;
+  //   }
+
+  //   &:hover {
+  //     color: #f00;
+  //   }
+  // }
+}
+
+// https://stylelint.io/user-guide/rules/media-feature-parentheses-space-inside/
+.media-feature-parentheses-space-inside {
+  @media (max-width: 300px) {
+    color: #ff0;
+  }
+
+  // // FAIL
+  // @media ( max-width: 300px ) {
+  //   color: #ff0;
+  // }
+}
+
+// https://stylelint.io/user-guide/rules/no-extra-semicolons/
+.no-extra-semicolons {
+  color: #ff0;
+  // color: #ff0;; // FAIL
+}
+
+// https://stylelint.io/user-guide/rules/number-leading-zero/
+.number-leading-zero {
+  color: rgba(255, 0, 0, 0.5);
+  // color: rgba(255, 0, 0, .5); // FAIL
+}
+
+// https://stylelint.io/user-guide/rules/number-no-trailing-zeros/
+.number-no-trailing-zeros {
+  margin: 1px;
+  // margin: 1.0px; // FAIL
+}
+
+// https://github.com/hudochenkov/stylelint-order/blob/master/rules/order/README.md
+.order {
+  --var: #ff0;
+  $var: #f00;
+
+  @extend %nt-placeholder;
+  @include nt-margin-auto;
+  @include nt-box(50px);
+
+  color: #000;
+
+  .level-1 {
+    color: #fff;
+  }
+
+  @media (min-width: 300px) {
+    color: #00f;
+  }
+}
+
+// https://github.com/hudochenkov/stylelint-order/blob/master/rules/properties-alphabetical-order/README.md
+.properties-alphabetical-order {
+  border-left: 1px solid #ff0;
+  border-top: 1px solid #ff0;
+  color: #00f;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  position: relative;
+  width: 1000px;
+  z-index: 1;
+  // // FAIL
+  // width: 1000px;
+  // margin-bottom: 10px;
+  // margin-right: 10px;
+  // color: #00f;
+  // border-top: 1px solid #ff0;
+  // border-left: 1px solid #ff0;
+  // position: relative;
+  // z-index: 1;
+}
+
+// https://stylelint.io/user-guide/rules/property-no-unknown/
+.property-no-unknown {
+  color: #ff0;
+  // colour: #ff0; // FAIL
+}
+
+// https://stylelint.io/user-guide/rules/property-no-vendor-prefix/
+.property-no-vendor-prefix {
+  transform: scale(1);
+  // -webkit-transform: scale(1); // FAIL
+}
+
+// https://stylelint.io/user-guide/rules/rule-empty-line-before/
+.rule-empty-line-before {
+  color: #ff0;
+}
+
+// ignore after comment
+.rule-empty-line-before-2 {
+  @media (min-width: 300px) {
+    .a {
+      color: #fff;
+    }
+
+    .b {
+      color: #f99;
+    }
+  }
+}
+
+// // FAIL
+// .rule-empty-line-before {
+//   color: #ff0;
+// }
+// .rule-empty-line-before-2 {
+//   color: #fff;
+// }
+
+// https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-extend-no-missing-placeholder/README.md
+.at-extend-no-missing-placeholder {
+  @extend %nt-placeholder;
+  // @extend .at-rule-no-unknown; // FAIL
+}

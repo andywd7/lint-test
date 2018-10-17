@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="nt-c-app">
     <img src="./assets/logo.png">
     <router-view/>
   </div>
@@ -7,17 +7,19 @@
 
 <script>
 export default {
-  name: 'App'
+    name: 'App'
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+<style lang="scss">
+@import "/assets/styles/test-styles.scss";
+
+.nt-c-app {
   color: #2c3e50;
-  margin-top: 60px;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  margin-top: 60;
+  text-align: center;
 }
 </style>
