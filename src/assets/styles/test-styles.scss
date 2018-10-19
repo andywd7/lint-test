@@ -93,9 +93,7 @@
 
 // https://stylelint.io/user-guide/rules/declaration-colon-space-after/
 .declaration-colon-space-after {
-  box-shadow:
-    0 0 0 1px #5b9dd9,
-    0 0 2px 1px rgba(30, 140, 190, 0.8);
+  box-shadow: 0 0 0 1px #5b9dd9, 0 0 2px 1px rgba(30, 140, 190, 0.8);
   color: #ff0;
   // color:#ff0; // FAIL
 }
@@ -119,16 +117,14 @@
 
 // https://stylelint.io/user-guide/rules/function-comma-space-after/
 .function-comma-space-after {
-  background-image:
-    repeating-linear-gradient(
-      -45deg,
-      transparent,
-      #fff 25px,
-      rgba(255, 255, 255, 1) 50px
-    );
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    #fff 25px,
+    rgba(255, 255, 255, 1) 50px
+  );
   color: rgba(255, 0, 0, 0.25);
   // color: rgba(255,0,0); // FAIL
-
 }
 
 // https://stylelint.io/user-guide/rules/function-comma-space-before/
@@ -139,20 +135,19 @@
 
 // https://stylelint.io/user-guide/rules/function-parentheses-space-inside/
 .function-parentheses-space-inside {
-  background-image:
-    repeating-linear-gradient(
-      -45deg,
-      transparent,
-      #fff 25px,
-      rgba(255, 255, 255, 1) 50px
-    );
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    #fff 25px,
+    rgba(255, 255, 255, 1) 50px
+  );
   color: rgba(255, 0, 0, 0.25);
   // color: rgba( 255, 0, 0, 0.25 ); // FAIL
 }
 
 // https://stylelint.io/user-guide/rules/function-url-quotes/
 .function-url-quotes {
-  background: url('/logo.png');
+  background: url("/logo.png");
   // background: url(/logo.png); // FAIL
 }
 
