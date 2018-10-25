@@ -1,25 +1,29 @@
-// // =============================================================================
+// // ==========================================================================
 // // 40-COMPONENTS / #MULTISELECT
-// // =============================================================================
+// // ==========================================================================
 
-// .multiselect {
-//   border: 1px solid $input-border-color;
-//   border-radius: $border-radius;
-//   // box-sizing: border-box;
-//   color: $input-color;
-//   cursor: pointer;
-//   min-height: auto;
-// }
+.multiselect {
+  background-image: url('/logo.png');
+  border: 1px solid $input-border-color;
+  border-radius: $border-radius;
+  // box-sizing: border-box;
+  box-shadow: 1px 1px 1px rgba(1, 1, 255, 0.5);
+  color: $input-color;
+  cursor: pointer;
+  min-height: auto;
+}
 
-// .is-invalid {
-//   .multiselect {
-//     border-color: #fff;
-//   }
+// dgdfg
+.is-invalid {
+  .multiselect {
+    border-color: #fff;
+  }
 
-//   ~ .invalid-feedback {
-//     display: block;
-//   }
-// }
+  // comment
+  ~ .invalid-feedback {
+    display: block;
+  }
+}
 
 // .multiselect,
 // /deep/ .multiselect__input,

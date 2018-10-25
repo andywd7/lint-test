@@ -11,7 +11,12 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data() {
+    return {
+      aasd: 'asdas'
+    }
+  }
 }
 </script>
 

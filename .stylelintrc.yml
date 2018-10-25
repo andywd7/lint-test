@@ -1,7 +1,7 @@
-extends: "./node_modules/stylelint-config-recommended"
+extends: './node_modules/stylelint-config-recommended'
 plugins:
-  - "./node_modules/stylelint-scss"
-  - "./node_modules/stylelint-order"
+  - './node_modules/stylelint-scss'
+  - './node_modules/stylelint-order'
 rules:
   # at-rule-blacklist: string|[]
   # at-rule-empty-line-before: always|never
@@ -54,7 +54,7 @@ rules:
   # declaration-property-unit-blacklist: {}
   # declaration-property-unit-whitelist: {}
   declaration-property-value-blacklist:
-    - "/^border/": ["none"]
+    - '/^border/': ['none']
   # declaration-property-value-whitelist: {}
   # font-family-name-quotes: always-where-required|always-where-recommended|always-unless-keyword
   # font-family-no-duplicate-names: true
@@ -86,12 +86,11 @@ rules:
   # max-line-length: int
   max-nesting-depth:
     - 1
-    - "ignoreAtRules": [
-        "each",
-        "media",
-        "supports",
-        "include"
-      ]
+    - 'ignoreAtRules':
+        - 'each'
+        - 'media'
+        - 'supports'
+        - 'include'
   # media-feature-colon-space-after: always|never
   # media-feature-colon-space-before: always|never
   # media-feature-name-blacklist: string|[]
@@ -121,8 +120,7 @@ rules:
   # number-max-precision: int
   number-no-trailing-zeros: true
   order/order:
-    -
-      - custom-properties
+    - - custom-properties
       - dollar-variables
       - type: at-rule
         name: extend
@@ -136,7 +134,7 @@ rules:
       - rules
       - type: at-rule
         name: media
-    - unspecified: "ignore"
+    - unspecified: 'ignore'
   order/properties-alphabetical-order: true
   # property-blacklist: string|[]
   # property-case: lower|upper
@@ -146,13 +144,13 @@ rules:
   rule-empty-line-before:
     - always
     - except:
-      - first-nested
+        - first-nested
       ignore:
-      - after-comment
+        - after-comment
   scss/at-rule-no-unknown: true
   scss/at-extend-no-missing-placeholder: true
   scss/at-function-pattern:
-    - "^nt-([a-z][a-z0-9]*)(-[a-z0-9]+)*$"
+    - '^nt-([a-z][a-z0-9]*)(-[a-z0-9]+)*$'
     - message: Expected function to be prefixed by "nt-" and to be kebab-case (scss/at-function-pattern)
   scss/at-import-no-partial-leading-underscore: true
   # scss/dollar-variable-pattern:
