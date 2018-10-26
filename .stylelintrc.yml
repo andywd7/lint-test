@@ -1,4 +1,5 @@
-extends: './node_modules/stylelint-config-recommended'
+extends:
+  - './node_modules/stylelint-config-recommended'
 plugins:
   - './node_modules/stylelint-scss'
   - './node_modules/stylelint-order'
