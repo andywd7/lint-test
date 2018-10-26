@@ -9,11 +9,10 @@ module.exports = {
   env: {
     browser: true
   },
-  extends: ['plugin:vue/recommended', 'prettier', 'prettier/standard'],
-  plugins: ['vue', 'prettier'],
+  extends: ['plugin:vue/recommended', 'standard'],
+  plugins: ['vue'],
   rules: {
-    'prettier/prettier': 'error',
-    'space-before-function-paren': [2, 'never'],
+    // 'space-before-function-paren': [2, 'always'],
     // allow async-await
     'generator-star-spacing': 'off',
     // allow debugger during development
